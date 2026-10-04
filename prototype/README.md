@@ -39,7 +39,7 @@ The original PNGs in the repo root are untouched. `assets/img` holds trimmed, re
 Image assets still owed are tracked in [`ASSETS-NEEDED.md`](ASSETS-NEEDED.md).
 
 - **Holly's photograph**: not in the repo yet. `.photo-placeholder` marks where it goes on Home and About (4:5 portrait).
-- **Blog**: intro copy, topic list and all article titles/excerpts are layout placeholders. The sample article body is written only to exercise the reading template.
+- **Blog**: intro copy, topic list and all article titles/excerpts are layout placeholders. The sample article body is written only to exercise the reading template. They don't need replacing in the prototype: in WordPress the blog index, article template and topic buttons are filled automatically from the real posts, featured images and categories.
 - **Resources**: the iron tools, 10 Nutrients download and Grocery Guide link to their live pages. Their short descriptions (and the full 10 Nutrients title) still need writing and are shown with striped `.tbd` highlighting. No prices are shown.
 - **Contact form** doesn't send in the prototype. In WordPress it becomes a form plugin (Fluent Forms, WPForms or similar) dropped into the page.
 - **Links**: footer legal links point to `#`.
