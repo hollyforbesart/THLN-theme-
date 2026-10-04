@@ -817,3 +817,10 @@ h3 { font-size: var(--fs-h3); font-weight: 700; line-height: 1.2; letter-spacing
   .res-grid > li:only-child .res-download__body { padding: 2.25rem 2.5rem; }
 }
 @media (max-width: 620px) { .res-grid--guides .res-guide { grid-template-columns: 1fr; } }
+
+/* Holly's photograph (replaces .photo-placeholder) */
+.holly-photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 55% 30%; border-radius: var(--radius-lg) var(--radius-lg) var(--radius-lg) 120px; }
+@media (max-width: 900px) { .holly-photo { aspect-ratio: 5 / 4; object-position: 55% 25%; } }
+img.avatar { object-fit: cover; padding: 0; }
+.res-tool__icon:has(img[src*="iron-"]) { background: transparent; }
+.res-tool__icon img[src*="iron-"] { width: 100%; border-radius: 50%; }
