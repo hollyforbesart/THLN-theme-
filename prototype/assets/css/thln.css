@@ -792,3 +792,28 @@ h3 { font-size: var(--fs-h3); font-weight: 700; line-height: 1.2; letter-spacing
 .form-status { font-weight: 700; background: var(--lavender); padding: .9rem 1.1rem; border-radius: 10px; margin: 0; }
 @media (max-width: 860px) { .contact-layout { grid-template-columns: 1fr; } }
 @media (max-width: 520px) { .field-row { grid-template-columns: 1fr; } .contact-form .btn { width: 100%; } }
+
+/* Resource card detail: lede, ✦ points, fine print */
+.res-lede { font-size: 1.125rem; font-weight: 800; color: var(--plum) !important; margin-bottom: .5rem !important; }
+.res-points { list-style: none; margin: 0 0 1.5rem; padding: 0; display: grid; gap: .45rem; }
+.res-points li { position: relative; padding-left: 1.5rem; font-size: .9688rem; line-height: 1.5; font-weight: 600; }
+.res-points li::before { content: "✦"; position: absolute; left: 0; top: 0; color: var(--purple-ink); font-size: .875rem; }
+.res-fine { display: block; font-size: .8125rem; line-height: 1.5; color: var(--text-muted); margin: .9rem 0 0; font-weight: 500; }
+.res-download .btn { margin-top: auto; }
+
+/* Guides: one full-width row per guide; the "more coming" note becomes a slim strip */
+.res-grid--guides { grid-template-columns: 1fr; }
+.res-grid--guides .res-guide { grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); }
+.res-grid--guides .res-guide__body { max-width: 720px; }
+.res-grid--guides .res-soon { min-height: 0; flex-direction: row; flex-wrap: wrap; align-items: center; gap: .5rem 2rem; padding: 1.25rem 1.75rem; }
+.res-grid--guides .res-soon p { margin: 0; flex: 1 1 280px; }
+.res-grid--guides .res-soon strong { margin: 0; }
+/* A lone download spans the row and lays out side by side; with 2+ they go back to cards */
+@media (min-width: 900px) {
+  .res-grid > li:only-child { grid-column: 1 / -1; }
+  .res-grid > li:only-child .res-download { flex-direction: row; max-width: 980px; }
+  .res-grid > li:only-child .res-download__visual { flex: 0 0 40%; aspect-ratio: auto; min-height: 320px; }
+  .res-grid > li:only-child .res-download__visual .sheet { width: 46%; }
+  .res-grid > li:only-child .res-download__body { padding: 2.25rem 2.5rem; }
+}
+@media (max-width: 620px) { .res-grid--guides .res-guide { grid-template-columns: 1fr; } }
