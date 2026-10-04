@@ -10,7 +10,8 @@ Static prototype of the redesigned The Hair Loss Nutritionist site. It sets the 
 | `about.html` | About. Uses the finalized About copy. |
 | `blog.html` | Blog index |
 | `article.html` | Representative blog article (reading template) |
-| `resources.html` | Resources (lives at `/shop/` in WordPress; nav label is "Resources") |
+| `resources.html` | Resources (lives at `/shop/` in WordPress; nav label is "Resources"). Order: paid guides, Navigator, free tools, free downloads. |
+| `contact.html` | Contact: copy from the About page's Talk to Me section, plus a contact form |
 
 Open any file in a browser, or serve the folder: `python3 -m http.server` from `prototype/`.
 
@@ -35,10 +36,13 @@ The original PNGs in the repo root are untouched. `assets/img` holds trimmed, re
 
 ## Placeholders to replace
 
+Image assets still owed are tracked in [`ASSETS-NEEDED.md`](ASSETS-NEEDED.md).
+
 - **Holly's photograph**: not in the repo yet. `.photo-placeholder` marks where it goes on Home and About (4:5 portrait).
 - **Blog**: intro copy, topic list and all article titles/excerpts are layout placeholders. The sample article body is written only to exercise the reading template.
-- **Resources**: names and descriptions for the two iron tools, the free download and the Grocery Guide description are not finalized. They are shown with striped `.tbd` highlighting. No prices are shown.
-- **Links**: footer legal links, Contact Me and resource links point to `#`.
+- **Resources**: the iron tools, 10 Nutrients download and Grocery Guide link to their live pages. Their short descriptions (and the full 10 Nutrients title) still need writing and are shown with striped `.tbd` highlighting. No prices are shown.
+- **Contact form** doesn't send in the prototype. In WordPress it becomes a form plugin (Fluent Forms, WPForms or similar) dropped into the page.
+- **Links**: footer legal links point to `#`.
 
 ## Copy notes
 
@@ -51,7 +55,7 @@ The goal: Holly edits words, images, links and resources in WordPress; the theme
 **Theme owns** (`thln-astra-child/`)
 - `style.css` → port of `thln.css` tokens and components
 - `theme.json` → palette (5 brand colors + white), Manrope font family and the type scale, content width 680px / wide 1240px, spacing scale. This makes the brand colors and sizes show up as the only choices in the editor.
-- Header/footer: Astra Header/Footer Builder configured with the logo, the 4 menu items (a WP menu, so editable) and a button set to the Navigator URL, styled by the child theme.
+- Header/footer: Astra Header/Footer Builder configured with the logo, the 5 menu items (Home, About, Blog, Resources, Contact) (a WP menu, so editable) and a button set to the Navigator URL, styled by the child theme.
 - `single.php` / block template for posts: TOC + 680px prose column + sticky Navigator aside.
 - Blog archive template: featured latest post, 3-up grid with a fixed 3:2 image ratio, category pills from real categories, Navigator band after the first 6 posts.
 - Block styles: `is-style-callout-takeaway`, `is-style-callout-note`, `is-style-callout-care` on the core Group block; `is-style-pull` on core Quote; `is-style-eyebrow` on Paragraph.
@@ -59,6 +63,9 @@ The goal: Holly edits words, images, links and resources in WordPress; the theme
 **Block patterns** (core blocks only, inserted once and then edited in place)
 - Home hero, Problem/noise list, DEEP ROOTS grid, ROOTS track, Path forward, Holly split, Closing CTA, Navigator band, Inline article CTA.
 - Each pattern is built from Group / Columns / Heading / Paragraph / Image / Buttons / List, so all text, images and links stay editable. The homepage is a normal page assembled from these patterns, not a hard-coded template.
+
+**DEEP ROOTS and ROOTS tiles → blog posts**
+- Tiles are unlinked today. When a post is ready, wrap that tile's icon and label in `<a class="tile-link" href="…">` (in WordPress: set a link on the tile's Group block). The tile picks up a hover state and a small "Read more" line; unlinked tiles keep their current look, so tiles can be linked one at a time.
 
 **Resources (`/shop/`)**
 - A `thln_resource` custom post type with fields: type (Tool, Quiz, Download, Guide), access (Free / Paid), short description, image, button label, URL, opens-externally flag, and menu order for sorting.

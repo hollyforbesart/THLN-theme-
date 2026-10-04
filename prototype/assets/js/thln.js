@@ -21,7 +21,7 @@
     toggle.addEventListener('click', function () { setOpen(toggle.getAttribute('aria-expanded') !== 'true'); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
     nav.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
-    window.matchMedia('(min-width: 961px)').addEventListener('change', function () { setOpen(false); });
+    window.matchMedia('(min-width: 1081px)').addEventListener('change', function () { setOpen(false); });
   }
 
   // Blog topic filter (in WordPress these become real category archive links)
@@ -50,5 +50,16 @@
       });
     }, { rootMargin: '-20% 0px -70% 0px' });
     Object.keys(map).forEach(function (id) { var el = document.getElementById(id); if (el) io.observe(el); });
+  }
+  // Contact form: prototype only (WordPress uses a form plugin)
+  var form = document.querySelector('.contact-form');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var status = form.querySelector('.form-status');
+      if (!form.reportValidity()) return;
+      status.hidden = false;
+      status.textContent = 'Prototype only: this form doesn\'t send yet. In WordPress it will go to Holly\'s inbox.';
+    });
   }
 })();
