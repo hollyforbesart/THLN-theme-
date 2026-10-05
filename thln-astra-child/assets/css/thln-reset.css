@@ -1,0 +1,3 @@
+/* Loaded before thln.css. Inside THLN sections WordPress's flow-layout class
+   is swapped for .thln-flow (inc/layout.php), so spacing comes from thln.css. */
+.thln-section .wp-block-buttons { display: flex; flex-wrap: wrap; }
