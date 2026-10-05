@@ -2,9 +2,10 @@
 
 What's waiting on Holly, where it shows up in the prototype, and what's there now. Add new rows as they come up, and check one off once the file is in the repo.
 
+Nothing is outstanding right now.
+
 | Status | Asset | Where it's used | Currently showing | Notes |
 | --- | --- | --- | --- | --- |
-| ☐ | Hair/scalp close-up hero photo (optional) | Home hero | Current supplied hero photo | Only needed if you want the close-up shot from "Concept 3". The layout already uses its type and curved edge. |
 
 ## Comes from WordPress
 
