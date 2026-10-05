@@ -83,10 +83,7 @@ The theme styles the form to match.
 
 ## 8. Clear caches and check (5 min)
 
-You have two caching plugins, so purge both:
-
-- **Purge SG Cache** in the top admin bar.
-- **Super Page Cache → Purge cache.**
+Click **Purge SG Cache** in the top admin bar. (If Super Page Cache is still active, also use **Super Page Cache → Purge cache**. See "Good to know" for why you can remove it.)
 
 Then open the site on your phone and on a computer, logged out (or in a private window). Click through Home, About, Blog, Resources and Contact, and send yourself a test message through the contact form.
 
@@ -99,7 +96,7 @@ If something is badly wrong at any point:
 1. **Appearance → Themes → Astra Child → Activate.**
 2. If you already changed the homepage: **Settings → Reading** → set it back to your old homepage.
 3. If you renamed old pages: change their slugs back and publish them again.
-4. Purge both caches.
+4. Purge the cache (Purge SG Cache).
 
 Your old theme and pages are untouched, so this restores the site as it was. UpdraftPlus (step 1) is the safety net behind all of that.
 
@@ -120,3 +117,5 @@ Your old theme and pages are untouched, so this restores the site as it was. Upd
 - **Elementor:** your existing Elementor pages keep working. Build the new pages in the regular WordPress editor (don't click "Edit with Elementor" on them).
 - **Theme updates:** when the theme changes, you'll get a new zip. Upload it the same way and WordPress offers to **Replace current with uploaded**. Your pages, resources and settings stay.
 - **Page images:** images placed by the patterns load from the theme folder. They're fine to keep, or swap for Media Library copies with **Replace**.
+- **One cache is enough.** Your site is hosted on SiteGround and doesn't use Cloudflare, so SiteGround's **Speed Optimizer** already does the page caching. **Super Page Cache** adds a second cache on top, which can make visitors see old versions of pages after you edit. Recommended: Super Page Cache → **Purge cache**, then **Plugins → Deactivate** it, check the site still loads, and delete it a week later. In **Speed Optimizer → Caching**, make sure **Dynamic Caching** is on.
+- **Code snippets:** snippets in WPCode or Code Snippets keep running under the new theme. A snippet written for Astra's old header or footer (for example, CSS that styles the old menu) would no longer apply.
