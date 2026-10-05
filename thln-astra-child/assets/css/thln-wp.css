@@ -279,9 +279,9 @@ body.thln .wp-block-quote.is-style-thln-pull p { margin: 0; font-size: inherit; 
 .res-points { margin-left: 0 !important; }
 
 /* ---------- Astra link styles vs. THLN components ---------- */
-body.thln .btn { color: #fff; text-decoration: none; }
+body.thln .btn, body.thln .entry-content .btn { color: #fff; text-decoration: none; }
 body.thln .btn--light { color: var(--plum); }
-body.thln .btn--outline { color: var(--plum); }
+body.thln .btn--outline, body.thln .entry-content .btn--outline { color: var(--plum); }
 body.thln .btn--outline:hover { color: #fff; }
 body.thln .res-tool, body.thln .res-tool *, body.thln .res-key a, body.thln .thln-nav a,
 body.thln .thln-footer a, body.thln .text-link { text-decoration: none; }
@@ -297,5 +297,9 @@ body.thln .res-points { margin: 0 0 1.5rem !important; padding: 0 !important; }
 /* ---------- Blog (light touch until the blog redesign) ---------- */
 body.thln .entry-meta, body.thln .entry-meta a, body.thln .ast-taxonomy-container a,
 body.thln .post-navigation a, body.thln .ast-blog-meta-container a { color: var(--text-muted); }
-body.thln .entry-content a { color: var(--plum); text-decoration-color: var(--purple); }
+body.thln:not(.thln-canvas) .entry-content a:not(.wp-block-button__link):not(.btn) { color: var(--plum); text-decoration-color: var(--purple); }
 body.thln .entry-content blockquote:not(.is-style-thln-pull) { border-left-color: var(--purple); font-style: normal; }
+
+/* Guide and download covers (featured images) */
+.res-guide__cover.has-image img { max-height: 360px; width: auto; max-width: 100%; border-radius: 4px; box-shadow: 0 22px 40px -16px rgba(46, 26, 71, .5); }
+.res-download__visual.has-image img { max-height: 280px; width: auto; max-width: 70%; border-radius: 3px; box-shadow: 0 14px 30px -12px rgba(46, 26, 71, .4); transform: rotate(-2deg); }

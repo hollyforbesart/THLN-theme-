@@ -9,7 +9,6 @@ Plan for about an hour at a quiet time of day. Steps 1–3 change nothing visito
 ## Before you start
 
 - **Download the theme zip:** `dist/thln-astra-child.zip` in this repository (on GitHub, open the file and click **Download raw file**). Don't unzip it.
-- **Have these handy:** your Grocery Guide and 10 Nutrients mockups are already in your Media Library. You'll pick them in step 6.
 
 ---
 
@@ -46,9 +45,7 @@ create a menu, add the pages, tick **Primary Menu** under "Menu Settings", Save.
 
 In the admin sidebar there's a new **Resources** item.
 
-1. Click **Resources**. A blue box offers **Add starter resources**: click it. This creates the Hair Growth Grocery Guide, both iron tools (with their icons) and the 10 Nutrients guide, with your copy and links.
-2. Open **Hair Growth Grocery Guide** → in the **Card image** box on the right, choose your guide mockup from the Media Library → **Update**.
-3. Do the same for **Healthy hair starts from within.** (10 Nutrients) with its mockup.
+Click **Resources**. A blue box offers **Add starter resources**: click it. This creates the Hair Growth Grocery Guide, both iron tools and the 10 Nutrients guide, with your copy, links, icons and covers. To change a card's picture later, open the resource and use the **Card image** box on the right.
 
 To add a resource later, use **Resources → Add resource**. Pick its section (Guides & paid resources, Free tools or Free downloads), Free or Paid, then fill in the text, button and link. **Order** (right side) sorts cards within a section: 1 comes first. Nothing on the Resources page needs editing; new resources just appear.
 

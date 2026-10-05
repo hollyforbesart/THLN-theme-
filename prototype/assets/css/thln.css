@@ -824,3 +824,8 @@ h3 { font-size: var(--fs-h3); font-weight: 700; line-height: 1.2; letter-spacing
 img.avatar { object-fit: cover; padding: 0; }
 .res-tool__icon:has(img[src*="iron-"]) { background: transparent; }
 .res-tool__icon img[src*="iron-"] { width: 100%; border-radius: 50%; }
+
+/* Real covers in the prototype */
+.res-guide__cover .cover { max-height: 360px; width: auto; max-width: 100%; border-radius: 4px; box-shadow: 0 22px 40px -16px rgba(46, 26, 71, .5); }
+.res-download__visual .cover { max-height: 280px; width: auto; max-width: 70%; border-radius: 3px; box-shadow: 0 14px 30px -12px rgba(46, 26, 71, .4); transform: rotate(-2deg); }
+.res-download__visual:has(.cover) { padding: 1.5rem; }

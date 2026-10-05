@@ -280,9 +280,9 @@ body.editor-styles-wrapper .wp-block-quote.is-style-thln-pull p { margin: 0; fon
 .res-points { margin-left: 0 !important; }
 
 /* ---------- Astra link styles vs. THLN components ---------- */
-body.editor-styles-wrapper .btn { color: #fff; text-decoration: none; }
+body.editor-styles-wrapper .btn, body.editor-styles-wrapper .entry-content .btn { color: #fff; text-decoration: none; }
 body.editor-styles-wrapper .btn--light { color: var(--plum); }
-body.editor-styles-wrapper .btn--outline { color: var(--plum); }
+body.editor-styles-wrapper .btn--outline, body.editor-styles-wrapper .entry-content .btn--outline { color: var(--plum); }
 body.editor-styles-wrapper .btn--outline:hover { color: #fff; }
 body.editor-styles-wrapper .res-tool, body.editor-styles-wrapper .res-tool *, body.editor-styles-wrapper .res-key a, body.editor-styles-wrapper .thln-nav a,
 body.editor-styles-wrapper .thln-footer a, body.editor-styles-wrapper .text-link { text-decoration: none; }
@@ -298,8 +298,12 @@ body.editor-styles-wrapper .res-points { margin: 0 0 1.5rem !important; padding:
 /* ---------- Blog (light touch until the blog redesign) ---------- */
 body.editor-styles-wrapper .entry-meta, body.editor-styles-wrapper .entry-meta a, body.editor-styles-wrapper .ast-taxonomy-container a,
 body.editor-styles-wrapper .post-navigation a, body.editor-styles-wrapper .ast-blog-meta-container a { color: var(--text-muted); }
-body.editor-styles-wrapper .entry-content a { color: var(--plum); text-decoration-color: var(--purple); }
+body.editor-styles-wrapper:not(.thln-canvas) .entry-content a:not(.wp-block-button__link):not(.btn) { color: var(--plum); text-decoration-color: var(--purple); }
 body.editor-styles-wrapper .entry-content blockquote:not(.is-style-thln-pull) { border-left-color: var(--purple); font-style: normal; }
+
+/* Guide and download covers (featured images) */
+.res-guide__cover.has-image img { max-height: 360px; width: auto; max-width: 100%; border-radius: 4px; box-shadow: 0 22px 40px -16px rgba(46, 26, 71, .5); }
+.res-download__visual.has-image img { max-height: 280px; width: auto; max-width: 70%; border-radius: 3px; box-shadow: 0 14px 30px -12px rgba(46, 26, 71, .4); transform: rotate(-2deg); }
 
 /* Editor: Astra styles headings and body text with its own fonts */
 body.editor-styles-wrapper, body.editor-styles-wrapper p, body.editor-styles-wrapper li,

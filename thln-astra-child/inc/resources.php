@@ -348,6 +348,7 @@ function thln_create_starter_resources() {
 			'points' => "Learn which nutrients support healthy hair\nDiscover everyday foods that provide those nutrients\nBuild balanced, hair-supportive meals without restrictive dieting\nStop wasting money on random supplements and products",
 			'button_label' => 'Get the guide — $19', 'url' => 'https://thehairlossnutritionist.com/hair-growth-grocery-guide/',
 			'fine_print' => 'Instant digital download. Practical nutrition guidance from a Registered Dietitian.',
+			'image' => 'grocery-guide-cover.webp',
 		),
 		array(
 			'title' => 'Could Low Iron Be Contributing to Your Hair Loss?', 'order' => 1, 'section' => 'tools', 'access' => 'free', 'type_label' => 'Screening tool',
@@ -364,6 +365,7 @@ function thln_create_starter_resources() {
 			'description' => 'A free, beginner-friendly guide to help you understand the 10 nutrients commonly linked to healthy hair. No complicated science. No restrictive diets. Just a simple place to start.',
 			'points' => "Learn about 10 nutrients that support healthy hair.\nDiscover everyday foods that naturally provide them.\nBuild a stronger foundation before spending money on products",
 			'button_label' => 'Send me the guide', 'url' => 'https://thehairlossnutritionist.com/10-nutrients/',
+			'image' => '10-nutrients-cover.webp',
 		),
 	);
 
