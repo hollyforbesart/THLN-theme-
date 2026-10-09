@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Food For Your Follicles · The Hair Loss Nutritionist</title>
+<link rel="stylesheet" href="css/doc.css">
+<link rel="stylesheet" href="css/tags.css">
+<style>
+/* ---------- Cover ---------- */
+.cover { background: #FAF7F0; }
+.cover__art {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  height: 7.7in;
+  background: url("assets/img/illustration.jpg") 62% 100% / cover no-repeat;
+}
+.cover__text { position: absolute; top: .72in; left: .8in; right: .8in; }
+.cover__logo { position: absolute; top: .55in; right: .7in; width: 1.55in; }
+.cover .eyebrow { margin-bottom: .2in; }
+.cover h1 {
+  font-size: 47pt; font-weight: 800; letter-spacing: -.025em; line-height: .98;
+  max-width: 5.6in;
+}
+.cover h1 span { color: var(--accent); }
+.cover__sub { margin-top: .2in; font-size: 13pt; font-weight: 500; color: var(--ink); max-width: 5.4in; line-height: 1.35; }
+.cover__by {
+  position: absolute; left: .8in; bottom: .6in;
+  font-size: 9pt; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--plum);
+  background: rgba(250,247,240,.88); padding: .08in .14in; border-radius: 4px;
+}
+.cover__by span { display: block; font-weight: 500; letter-spacing: .06em; text-transform: none; color: var(--muted); font-size: 8.4pt; }
+
+/* ---------- Interior ---------- */
+.inner { padding: .5in .7in 0; height: calc(11in - .62in); display: flex; flex-direction: column; }
+.flow { column-count: 2; column-gap: .38in; column-fill: auto; flex: 1; min-height: 0; }
+
+.intro { padding-bottom: .1in; margin-bottom: .16in; border-bottom: 1px solid var(--rule); }
+.intro h1 { font-size: 18pt; font-weight: 800; letter-spacing: -.02em; line-height: 1.1; margin: .02in 0 .1in; }
+.intro__cols { display: grid; grid-template-columns: 1fr 1fr; gap: .38in; }
+.intro__cols p:last-child { margin-bottom: 0; }
+.intro .lead { font-size: 10.4pt; max-width: 6.6in; line-height: 1.5; color: var(--plum); font-weight: 500; }
+.intro p:last-child { margin-bottom: 0; }
+.intro .cue { font-weight: 700; color: var(--accent); }
+
+.nut { margin-bottom: .16in; }
+.nut__head { display: flex; align-items: center; gap: .13in; margin-bottom: .09in; break-after: avoid; break-inside: avoid; }
+.nut__head img { width: .54in; height: .54in; flex: none; }
+.nut__num { font-size: 7.4pt; font-weight: 800; letter-spacing: .14em; color: var(--tag-ink); display: block; margin-bottom: .02in; }
+.nut h2 { font-size: 15.5pt; font-weight: 800; letter-spacing: -.01em; }
+.nut h3 {
+  font-size: 7.3pt; font-weight: 800; letter-spacing: .13em; text-transform: uppercase;
+  color: var(--tag-ink); margin: .09in 0 .03in; break-after: avoid;
+}
+.nut p { orphans: 2; widows: 2; }
+.find {
+  background: color-mix(in srgb, var(--tag-bg) 55%, white);
+  border-radius: 8px; padding: .08in .13in .07in; margin: .07in 0 .02in;
+  break-inside: avoid;
+}
+.find h3 { margin-top: 0; }
+.find p { margin-bottom: .2em; }
+.find p:last-child { margin-bottom: 0; }
+
+/* Supplements note */
+.note {
+  background: #fff; border: 1px solid var(--rule); border-radius: 12px;
+  padding: .16in .24in .08in; margin-top: .12in; font-size: 8.5pt; line-height: 1.42;
+}
+.note h2 { font-size: 13pt; font-weight: 800; letter-spacing: -.01em; margin: .03in 0 .1in; }
+.note__cols { column-count: 3; column-gap: .24in; }
+.note__cols p { break-inside: avoid; }
+.note .fine { font-size: 8.4pt; color: var(--muted); font-style: italic; }
+
+/* ---------- Ending page ---------- */
+.end__photo {
+  position: absolute; top: 0; left: 0; right: 0; height: 4in;
+  background: url("assets/img/flatlay.jpg") 50% 46% / cover no-repeat;
+}
+.end__photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(250,246,240,0) 65%, var(--cream)); }
+.end__body { position: absolute; top: 3.68in; left: .7in; right: .7in; }
+.end__body > h1 { font-size: 27pt; font-weight: 800; letter-spacing: -.02em; margin: .1in 0 .26in; }
+.paths { display: grid; grid-template-columns: 1fr 1fr; gap: .26in; }
+.path { border-radius: 14px; padding: .3in .3in .28in; display: flex; flex-direction: column; }
+.path h2 { font-size: 14pt; font-weight: 800; line-height: 1.22; margin: .08in 0 .14in; }
+.path p { font-size: 9.6pt; }
+.path .btn { margin-top: auto; align-self: flex-start; }
+.path__go { margin-top: auto; padding-top: .12in; }
+.path__url { display: block; font-size: 7.6pt; margin-top: .08in; letter-spacing: .02em; }
+.path--nav { background: var(--plum); color: rgba(250,246,240,.86); }
+.path--nav h2, .path--nav strong { color: #fff; }
+.path--nav .eyebrow { color: var(--purple); }
+.path--nav .path__url { color: rgba(250,246,240,.6); }
+.path--meals { background: var(--lavender); }
+.path--meals .path__url { color: var(--muted); }
+.signoff {
+  position: absolute; left: .7in; right: .7in; bottom: .45in;
+  display: flex; align-items: center; gap: .26in;
+  border-top: 1px solid var(--rule); padding-top: .2in;
+  font-size: 8pt; color: var(--muted);
+}
+.signoff img { width: 1.3in; flex: none; }
+.signoff p { margin: 0; }
+.signoff strong { font-size: 9pt; }
+</style>
+</head>
+<body>
+
+<!-- 1. COVER -->
+<section class="page cover">
+  <div class="cover__art" role="img" aria-label="Illustration of a woman with long curly hair, eyes closed, face lifted toward the light"></div>
+  <img class="cover__logo" src="assets/img/logo.svg" alt="The Hair Loss Nutritionist">
+  <div class="cover__text">
+    <p class="eyebrow">Free guide</p>
+    <h1>Food for Your <span>Follicles</span></h1>
+    <p class="cover__sub">10 nutrients that support healthy hair + where to find them</p>
+  </div>
+  <p class="cover__by">Holly Forbes, RDN<span>The Hair Loss Nutritionist</span></p>
+</section>
+
+<!-- 2. INTRO + 01–03 -->
+<section class="page">
+  <div class="inner">
+    <div class="intro">
+      <h1>10 nutrients that support healthy hair + where to find them</h1>
+      <p class="lead">Your hair follicles are some of the most active parts of your body. To keep producing hair, they need a steady supply of energy, protein, vitamins, minerals, and essential fats from the foods you eat.</p>
+      <div class="intro__cols">
+        <p>Some nutrients, like protein and carbohydrates, are <strong>macronutrients</strong>. Your body needs them in larger amounts. Vitamins and minerals are <strong>micronutrients</strong>. You need much smaller amounts, but they still play important roles in keeping your body and hair follicles working properly.</p>
+        <p>Nutrition is only one part of hair health, but it is an important part you can participate in. <span class="cue">Here are 10 nutrients worth knowing about.</span></p>
+      </div>
+    </div>
+
+    <div class="flow flow--short">
+      <article class="nut t-protein">
+        <header class="nut__head"><img src="assets/icons/protein.png" alt=""><div><span class="nut__num">01</span><h2>Protein</h2></div></header>
+        <h3>Why your follicles need it</h3>
+        <p>Your hair is made mostly of a protein called keratin. Your body needs enough protein to build strong hair strands and support normal hair growth. Not eating enough protein can lead to increased shedding and finer, weaker hair.</p>
+        <div class="find"><h3>Find it in</h3><p>Beef, lamb, pork, chicken, turkey, fish, eggs, Greek yogurt, cottage cheese, milk, tofu, tempeh, edamame, beans, lentils, nuts, and seeds.</p></div>
+        <h3>Put it into practice</h3>
+        <p>Include a source of protein each time you eat. Spreading protein throughout the day can make it easier to consistently meet your needs.</p>
+        <h3>Supplement smart</h3>
+        <p>You don't need protein powder to support healthy hair, but if you have trouble getting enough protein from food, a protein shake or powder can be a convenient way to help fill the gap.</p>
+      </article>
+
+      <article class="nut t-carbs">
+        <header class="nut__head"><img src="assets/icons/carbs.png" alt=""><div><span class="nut__num">02</span><h2>Carbohydrates</h2></div></header>
+        <h3>Why your follicles need them</h3>
+        <p>Carbohydrates are your body's main source of energy. Your body breaks them down into glucose, which your cells can use for energy right away or store for later. Your hair follicles need this energy to keep producing new hair.</p>
+        <p>When your body isn't getting enough food and energy, it has to be more selective about where energy goes. Essential functions, like keeping your heart beating, brain working, and organs functioning, take priority. Growing hair is important to us, but it isn't necessary to keep the body functioning, so hair growth can be affected when energy is limited.</p>
+        <p>Over time, not eating enough or following a very restrictive diet can disrupt the normal hair growth cycle. More hairs may leave the growing phase and enter the resting and shedding phases, which is why increased shedding may not become noticeable until a few months after the change in your diet.</p>
+        <div class="find"><h3>Find them in</h3><p>Oats, rice, quinoa, bread, pasta, potatoes, sweet potatoes, corn, beans, lentils, fruit, and other grains.</p></div>
+        <h3>Put it into practice</h3>
+        <p>Carbohydrates shouldn't be avoided, as they're needed for healthy hair. Include carbohydrate foods regularly and choose a variety of whole grains, beans, fruit, and starchy vegetables.</p>
+      </article>
+
+      <article class="nut t-iron">
+        <header class="nut__head"><img src="assets/icons/iron.png" alt=""><div><span class="nut__num">03</span><h2>Iron</h2></div></header>
+        <h3>Why your follicles need it</h3>
+        <p>Iron helps your red blood cells carry oxygen throughout your body, including to your hair follicles. When your iron stores are low, it can contribute to diffuse hair shedding.</p>
+        <p><strong>Ferritin</strong> is a protein that stores iron in your body. A ferritin blood test can help show how much iron you have stored.</p>
+        <div class="find"><h3>Find it in</h3><p>Beef, chicken, turkey, sardines, tuna, eggs, oysters, lentils, white beans, kidney beans, chickpeas, tofu, spinach, green peas, potatoes, cashews, whole-wheat bread, and iron-fortified breakfast cereals.</p></div>
+        <h3>Put it into practice</h3>
+        <p>Your body absorbs iron from animal foods more easily than iron from plant foods. Eating vitamin C-rich foods with plant sources of iron helps your body absorb more of it.</p>
+        <h3>Supplement smart</h3>
+        <p>If your ferritin or other iron markers are low, iron supplementation may be helpful. But it is important to also figure out why your iron is low, such as heavy menstrual bleeding, low dietary intake, blood loss, or problems with absorption, so the underlying issue can be addressed too.</p>
+      </article>
+    </div>
+  </div>
+  <footer class="folio"><span><b>Food for Your Follicles</b></span><span>thehairlossnutritionist.com</span><span>2</span></footer>
+</section>
+
+<!-- 3. 04–07 -->
+<section class="page">
+  <div class="inner">
+    <div class="flow">
+      <article class="nut t-zinc">
+        <header class="nut__head"><img src="assets/icons/zinc.png" alt=""><div><span class="nut__num">04</span><h2>Zinc</h2></div></header>
+        <h3>Why your follicles need it</h3>
+        <p>Zinc helps your body make proteins and new cells, two things your follicles need to produce hair. Not getting enough zinc can weaken the hair and contribute to hair loss.</p>
+        <div class="find"><h3>Find it in</h3><p>Beef, pork, turkey, shrimp, sardines, oysters, Greek yogurt, cheddar cheese, lentils, oats, pumpkin seeds, and zinc-fortified breakfast cereals.</p></div>
+        <h3>Supplement smart</h3>
+        <p>Zinc supplements can be useful when you aren't getting enough or have a deficiency, but taking too much for too long can interfere with your body's ability to absorb copper.</p>
+      </article>
+
+      <article class="nut t-vitd">
+        <header class="nut__head"><img src="assets/icons/vitd.png" alt=""><div><span class="nut__num">05</span><h2>Vitamin D</h2></div></header>
+        <h3>Why your follicles need it</h3>
+        <p>Your hair follicles have receptors for vitamin D, and vitamin D plays a role in the normal hair growth cycle. Low vitamin D is commonly seen in people with several types of hair loss.</p>
+        <div class="find"><h3>Find it in</h3><p>Salmon, trout, tuna, sardines, eggs, and mushrooms exposed to UV light. Vitamin D is also added to cow's milk, many plant milks, and some breakfast cereals.</p></div>
+        <h3>What about sunlight?</h3>
+        <p>Your skin can make vitamin D when it is exposed to sunlight, but the amount you make varies. Your skin color, where you live, the time of year, time of day, age, sunscreen use, how much skin is exposed, and how much time you spend outdoors impact the amount of vitamin D you are able to make.</p>
+        <h3>Supplement smart</h3>
+        <p>Vitamin D can be difficult to get from food alone, and supplements are often recommended when levels are low.</p>
+      </article>
+
+      <article class="nut t-b12">
+        <header class="nut__head"><img src="assets/icons/b12.png" alt=""><div><span class="nut__num">06</span><h2>Vitamin B12</h2></div></header>
+        <h3>Why your follicles need it</h3>
+        <p>Your hair follicles are constantly making new cells. Vitamin B12 helps your body make DNA for those new cells and healthy red blood cells that carry oxygen throughout your body. A B12 deficiency can lead to anemia and may contribute to diffuse hair loss.</p>
+        <div class="find"><h3>Find it in</h3><p>Salmon, tuna, beef, eggs, milk, yogurt, cheddar cheese, clams, and oysters. Fortified nutritional yeast and fortified breakfast cereals can also provide B12.</p><p>Plant foods do not naturally contain B12 unless they are fortified. <strong>Fortified</strong> means a nutrient has been added to the food to increase the amount it provides.</p></div>
+        <h3>Supplement smart</h3>
+        <p>Pay extra attention to B12 if you eat little or no animal food, have had bariatric or gastrointestinal surgery, have a condition that affects absorption, or take medications that can affect B12 levels.</p>
+        <p>If you aren't getting enough or have trouble absorbing B12, fortified foods or a B12 supplement can help you meet your needs.</p>
+      </article>
+
+      <article class="nut t-vitc">
+        <header class="nut__head"><img src="assets/icons/vitc.png" alt=""><div><span class="nut__num">07</span><h2>Vitamin C</h2></div></header>
+        <h3>Why your follicles need it</h3>
+        <p>Vitamin C helps your body make collagen, a protein that supports the tissues around your hair follicles. It also helps your body absorb iron from plant foods and works as an antioxidant that helps protect your cells from damage.</p>
+        <div class="find"><h3>Find it in</h3><p>Oranges, grapefruit, kiwi, strawberries, cantaloupe, red and green bell peppers, broccoli, Brussels sprouts, cabbage, cauliflower, tomatoes, and potatoes.</p></div>
+        <h3>Put it into practice</h3>
+        <p>Pair vitamin C-rich foods with plant sources of iron. This simple combination helps your body absorb more of the iron in your meal.</p>
+        <h3>Supplement smart</h3>
+        <p>Most people can get enough vitamin C by regularly eating fruits and vegetables. A supplement may be useful when your diet is very limited or you have a health condition that makes it harder to get or absorb enough vitamin C.</p>
+      </article>
+    </div>
+  </div>
+  <footer class="folio"><span><b>Food for Your Follicles</b></span><span>thehairlossnutritionist.com</span><span>3</span></footer>
+</section>
+
+<!-- 4. 08–10 + supplements note -->
+<section class="page">
+  <div class="inner">
+    <div class="flow flow--p4">
+      <article class="nut t-biotin">
+        <header class="nut__head"><img src="assets/icons/biotin.png" alt=""><div><span class="nut__num">08</span><h2>Biotin</h2></div></header>
+        <h3>Why your follicles need it</h3>
+        <p>Biotin is a B vitamin that helps your body turn carbohydrates, fats, and proteins into energy. A true biotin deficiency can cause thinning hair, but deficiency is rare.</p>
+        <div class="find"><h3>Find it in</h3><p>Eggs, salmon, tuna, pork, beef, sunflower seeds, sweet potatoes, and almonds.</p></div>
+        <h3>Supplement smart</h3>
+        <p>Biotin gets a lot of attention in hair supplements, but taking more isn't automatically better for your hair. If you're already getting enough biotin, extra biotin hasn't been shown to improve hair growth.</p>
+        <p>High-dose biotin supplements can also interfere with certain blood tests.</p>
+      </article>
+
+      <article class="nut t-omega3">
+        <header class="nut__head"><img src="assets/icons/omega3.png" alt=""><div><span class="nut__num">09</span><h2>Omega-3 Fatty Acids</h2></div></header>
+        <h3>Why your follicles need them</h3>
+        <p>Omega-3s are essential fats that help make up the outer layer of your cells and help your body manage inflammation. They also support the health of your skin and scalp.</p>
+        <p>There are three main types of omega-3s you may see listed on foods or supplements:</p>
+        <p><strong>ALA (alpha-linolenic acid)</strong> is the type found mainly in plant foods. ALA is an essential fat, which means your body can't make it and you have to get it from food.</p>
+        <p><strong>EPA (eicosapentaenoic acid)</strong> and <strong>DHA (docosahexaenoic acid)</strong> are found mainly in fish and seafood.</p>
+        <p>Your body can turn some ALA into EPA and DHA, but only in small amounts. That's why it helps to know which type of omega-3 you're getting from your food.</p>
+        <div class="find"><h3>Find them in</h3><p>Salmon, mackerel, tuna, herring, and sardines provide EPA and DHA. Flaxseed, chia seeds, walnuts, soybean oil, and canola oil provide ALA.</p></div>
+        <h3>Put it into practice</h3>
+        <p>If you eat fish, fatty fish is the most direct food source of EPA and DHA. If you don't eat fish, regularly include foods that provide ALA, such as chia seeds, ground flaxseed, and walnuts.</p>
+        <h3>Supplement smart</h3>
+        <p>If you rarely or never eat fish, an omega-3 supplement may be worth considering. Fish oil provides EPA and DHA, while algae-based supplements are a fish-free option.</p>
+      </article>
+
+      <article class="nut t-folate">
+        <header class="nut__head"><img src="assets/icons/folate.png" alt=""><div><span class="nut__num">10</span><h2>Folate</h2></div></header>
+        <h3>Why your follicles need it</h3>
+        <p>Your hair follicles are constantly making new cells as they grow new hair. Folate helps your body make the DNA those new cells need and helps them divide and multiply. Getting enough folate helps your follicles continue this process as they produce hair.</p>
+        <div class="find"><h3>Find it in</h3><p>Spinach, asparagus, Brussels sprouts, broccoli, avocado, black-eyed peas, kidney beans, green beans, peanuts, oranges, papaya, and eggs.</p><p>Folic acid, a form of folate, is also added to many enriched breads, flour, pasta, and rice, as well as fortified breakfast cereals.</p></div>
+        <h3>Supplement smart</h3>
+        <p>Folic acid supplementation is especially important before and during pregnancy because adequate folate helps prevent neural tube defects.</p>
+        <p>Outside of pregnancy and other specific needs, a varied diet and fortified foods can provide folate for many people.</p>
+      </article>
+    </div>
+
+    <aside class="note">
+      <p class="eyebrow">Before you buy</p>
+      <h2>A note about supplements</h2>
+      <div class="note__cols">
+        <p>When it comes to supplements, <strong>more isn't always better</strong>. The goal is to get enough of each nutrient to meet your body's needs. Taking extra when you're already getting enough does not necessarily provide additional benefits and, for some nutrients, too much can be harmful.</p>
+        <p>Supplements can be helpful when they fill a <strong>nutrient deficiency, low intake, or other gap</strong> that food alone isn't meeting. The amount you need depends on the nutrient and your individual situation, including your diet, bloodwork, health history, medications, life stage, and how well your body absorbs nutrients.</p>
+        <p>There is no single supplement dose that is right for everyone. If a supplement is needed to correct a deficiency, the appropriate amount and how long you need to take it should be based on your individual needs.</p>
+        <p class="fine">This guide is for general education and is not a personalized nutrition or supplement plan.</p>
+      </div>
+    </aside>
+  </div>
+  <footer class="folio"><span><b>Food for Your Follicles</b></span><span>thehairlossnutritionist.com</span><span>4</span></footer>
+</section>
+
+<!-- 5. WHERE NEXT -->
+<section class="page end">
+  <div class="end__photo" role="img" aria-label="Flat lay of salmon, eggs, avocado, spinach, berries, nuts, and seeds"></div>
+  <div class="end__body">
+    <p class="eyebrow">Your next step</p>
+    <h1>Where do you go from here?</h1>
+    <div class="paths">
+      <div class="path path--nav">
+        <p class="eyebrow">Free tool</p>
+        <h2>Not sure what's contributing to your hair loss?</h2>
+        <p>Nutrition may be part of the picture, but hair loss can also be connected to hormones, stress, illness, medications, scalp conditions, styling practices, genetics, and other factors.</p>
+        <p>The <strong>DEEP ROOTS Navigator</strong> looks across these different areas and helps you identify what may deserve a closer look.</p>
+        <div class="path__go">
+          <a class="btn btn--light" href="https://navigator.thehairlossnutritionist.com/">Get My Hair Roadmap <span aria-hidden="true">→</span></a>
+          <span class="path__url">navigator.thehairlossnutritionist.com</span>
+        </div>
+      </div>
+      <div class="path path--meals">
+        <p class="eyebrow">Meal ideas</p>
+        <h2>You know what to eat. Now, what does that look like on your plate?</h2>
+        <p>Knowing which nutrients support healthy hair is one thing. Figuring out what to make with those foods every day is another.</p>
+        <p>That's where <strong>Mane Meals: The Everyday Edition</strong> comes in.</p>
+        <p>Inside, you'll find <strong>21 meal and snack ideas</strong> featuring foods that provide the 10 nutrients you just learned about. From grab-and-go breakfasts to easy dinners after a long day, you'll see how familiar ingredients can come together in different ways.</p>
+        <div class="path__go">
+          <a class="btn" href="https://roots.thehairlossnutritionist.com/products/mane-meals-everyday">Explore Mane Meals <span aria-hidden="true">→</span></a>
+          <span class="path__url">roots.thehairlossnutritionist.com</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="signoff">
+    <img src="assets/img/logo.svg" alt="The Hair Loss Nutritionist">
+    <p><strong>Holly Forbes, RDN</strong><br>The Hair Loss Nutritionist · thehairlossnutritionist.com</p>
+  </footer>
+</section>
+
+</body>
+</html>

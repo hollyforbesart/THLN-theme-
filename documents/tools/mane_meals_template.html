@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Generated from tools/mane_meals_template.html by tools/build_mane_meals.py. Edit those, not mane-meals.html. -->
+<title>Mane Meals: The Everyday Edition · The Hair Loss Nutritionist</title>
+<link rel="stylesheet" href="css/doc.css">
+<link rel="stylesheet" href="css/tags.css">
+<style>
+/* ---------- Cover ---------- */
+.cover__head { position: absolute; top: .62in; left: .75in; right: .75in; }
+.cover__logo { position: absolute; top: .52in; right: .7in; width: 1.5in; }
+.cover h1 { font-size: 62pt; font-weight: 800; letter-spacing: -.035em; line-height: .92; margin-top: .26in; }
+.cover__ed { display: block; font-size: 24pt; font-weight: 600; letter-spacing: -.01em; color: var(--accent); margin-top: .12in; }
+.cover__sub { margin-top: .22in; font-size: 12pt; font-weight: 500; max-width: 4.6in; line-height: 1.4; }
+.mosaic {
+  position: absolute; left: .75in; right: .75in; top: 3.05in; height: 6.85in;
+  display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); gap: .12in;
+}
+.mosaic img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block; }
+.mosaic img:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+.cover__by {
+  position: absolute; left: .75in; right: .75in; bottom: .45in;
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-size: 9pt; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--plum);
+}
+.cover__by span { font-weight: 500; letter-spacing: .04em; text-transform: none; color: var(--muted); }
+
+/* ---------- Interior ---------- */
+.inner { padding: .55in .75in 0; }
+
+/* Intro 1 */
+.welcome { display: grid; grid-template-columns: 1fr; }
+.welcome h1, .key-head h1 { font-size: 26pt; font-weight: 800; letter-spacing: -.02em; margin: .08in 0 .2in; }
+.welcome .lead { font-size: 12pt; line-height: 1.5; color: var(--plum); font-weight: 500; max-width: 6.4in; }
+.welcome__cols { column-count: 2; column-gap: .4in; font-size: 9.6pt; margin-top: .12in; }
+.welcome__cols p { break-inside: avoid; }
+.work { margin-top: .32in; padding-top: .3in; border-top: 1px solid var(--rule); }
+.work h2 { font-size: 18pt; font-weight: 800; letter-spacing: -.01em; margin: .06in 0 .08in; }
+.work > p { font-size: 9.6pt; }
+.work ol { list-style: none; margin: .18in 0 .14in; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: .16in .2in; counter-reset: w; }
+.work li { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: .18in .2in .14in; counter-increment: w; font-size: 9.4pt; }
+.work li::before { content: "0" counter(w); display: block; font-size: 7.6pt; font-weight: 800; letter-spacing: .14em; color: var(--accent); margin-bottom: .05in; }
+.work li strong { display: block; font-size: 11pt; margin-bottom: .04in; }
+.work .after { font-size: 9.6pt; }
+.disclaimer {
+  position: absolute; left: .75in; right: .75in; bottom: .95in;
+  background: var(--lavender); border-radius: 12px; padding: .16in .22in;
+  font-size: 8.8pt; color: var(--plum); display: flex; gap: .14in; align-items: flex-start;
+}
+.disclaimer b { font-size: 7.4pt; letter-spacing: .14em; text-transform: uppercase; white-space: nowrap; padding-top: .02in; }
+
+/* Intro 2: nutrient key */
+.key-head .lead { font-size: 10.6pt; color: var(--plum); font-weight: 500; max-width: 6.6in; }
+.key { list-style: none; padding: 0; margin: .26in 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: .2in .32in; }
+.key__item { display: flex; gap: .15in; align-items: flex-start; }
+.key__item img { width: .72in; height: .72in; flex: none; }
+.key__item h3 { font-size: 11pt; font-weight: 800; color: var(--plum); margin: .07in 0 .04in; }
+.key__item p { font-size: 8.9pt; margin: 0; }
+.howto {
+  position: absolute; left: .75in; right: .75in; bottom: .95in;
+  background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: .2in .24in .18in;
+}
+.howto h2 { font-size: 12pt; font-weight: 800; margin: .04in 0 .08in; }
+.howto p { font-size: 8.9pt; margin: 0 0 .12in; }
+.tags { display: flex; flex-wrap: wrap; gap: .05in .06in; }
+
+/* Meal pages */
+.meals-head { display: flex; align-items: baseline; gap: .16in; margin-bottom: .1in; }
+.meals-head h1 { font-size: 22pt; font-weight: 800; letter-spacing: -.02em; }
+.meals-head .eyebrow { order: 2; }
+.cat { margin-top: .12in; }
+.cat__title {
+  font-size: 11pt; font-weight: 700; color: var(--accent);
+  padding-bottom: .08in; border-bottom: 1px solid var(--rule); margin-bottom: .02in;
+}
+.meal { display: grid; grid-template-columns: 1.12in 1fr; gap: .24in; align-items: center; padding: .08in 0; border-bottom: 1px solid var(--rule); }
+.cat .meal:last-child { border-bottom: 0; }
+.meal__photo { width: 1.12in; height: 1.12in; object-fit: cover; border-radius: 10px; display: block; }
+.meal h3 { font-size: 12pt; font-weight: 800; letter-spacing: -.005em; margin-bottom: .05in; }
+.meal__ing { font-size: 9.4pt; margin-bottom: .09in; }
+.footnote { font-size: 8pt; color: var(--muted); margin-top: .08in; font-style: italic; }
+
+/* Snacks + closing */
+.closing {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 4.6in;
+  background: var(--plum); color: rgba(250,246,240,.86);
+  padding: .5in .75in 0;
+}
+.closing h2 { color: #fff; font-size: 24pt; font-weight: 800; letter-spacing: -.02em; margin: .08in 0 .2in; }
+.closing .eyebrow { color: var(--purple); }
+.closing__cols { display: grid; grid-template-columns: 1fr 1fr; gap: .4in; font-size: 10.2pt; line-height: 1.55; }
+.closing__cols p:first-child { font-size: 12pt; color: #fff; font-weight: 500; line-height: 1.45; }
+.closing__sign {
+  position: absolute; left: .75in; right: .75in; bottom: .4in;
+  display: flex; align-items: center; gap: .24in;
+  border-top: 1px solid rgba(250,246,240,.18); padding-top: .2in; font-size: 8.4pt; color: rgba(250,246,240,.7);
+}
+.closing__sign img { width: 1.3in; }
+.closing__sign strong { color: #fff; }
+.closing__sign p { margin: 0; }
+</style>
+</head>
+<body>
+
+<!-- 1. COVER -->
+<section class="page cover">
+  <img class="cover__logo" src="assets/img/logo.svg" alt="The Hair Loss Nutritionist">
+  <div class="cover__head">
+    <p class="eyebrow">21 meal and snack ideas</p>
+    <h1>Mane Meals<span class="cover__ed">The Everyday Edition</span></h1>
+    <p class="cover__sub">Simple meals and snacks that provide nutrients important for healthy hair.</p>
+  </div>
+  <div class="mosaic">
+    <img src="assets/photos/image7.jpg" alt="">
+    <img src="assets/photos/image16.jpg" alt="">
+    <img src="assets/photos/image18.jpg" alt="">
+    <img src="assets/photos/image8.jpg" alt="">
+    <img src="assets/photos/image12.jpg" alt="">
+    <img src="assets/photos/image10.jpg" alt="">
+  </div>
+  <p class="cover__by">Holly Forbes, RDN <span>The Hair Loss Nutritionist</span></p>
+</section>
+
+<!-- 2. WELCOME + MAKE IT WORK -->
+<section class="page">
+  <div class="inner">
+    <div class="welcome">
+      <p class="eyebrow">Mane Meals · The Everyday Edition</p>
+      <h1>Welcome to Mane Meals</h1>
+      <p class="lead">Eating to support your hair doesn't have to mean buying expensive superfoods, following a strict meal plan, or making something different every day.</p>
+      <div class="welcome__cols">
+        <p><strong>Mane Meals: The Everyday Edition</strong> brings together 21 meal and snack ideas that provide nutrients important for healthy hair.</p>
+        <p>You'll find meals for busy mornings, quick lunches, and evenings when you barely feel like cooking. Many use similar ingredients in different ways, giving you more variety without having to start from scratch every day.</p>
+        <p>The goal isn't to follow every meal exactly. It's to give you ideas you can come back to, adapt, and make your own.</p>
+      </div>
+    </div>
+
+    <div class="work">
+      <p class="eyebrow">How to use this guide</p>
+      <h2>Make It Work for You</h2>
+      <p>There's no schedule to follow and no particular order to eat these meals.</p>
+      <ol>
+        <li><strong>Choose what fits your day.</strong>Some meals come together in minutes. Others need a little more preparation. Pick what works for your time, appetite, and energy.</li>
+        <li><strong>Repeat what you enjoy.</strong>You don't need 21 different meals and snacks every week. Find a few favorites and bring them into your regular rotation.</li>
+        <li><strong>Use what you already have.</strong>Many of these meals share ingredients, so you can use the same foods in different ways. Swap ingredients based on what you have available and what you like.</li>
+        <li><strong>Make it your own.</strong>These are meal ideas, not strict recipes. Adjust portions, seasonings, and ingredients to suit your needs.</li>
+      </ol>
+      <p class="after">You'll also see the nutrients highlighted under each meal, so you can recognize how everyday foods contribute to nourishing your hair.</p>
+    </div>
+  </div>
+  <p class="disclaimer"><b>Please note</b><span>{{DISCLAIMER}}</span></p>
+  {{FOLIO2}}
+</section>
+
+<!-- 3. NUTRIENT KEY -->
+<section class="page">
+  <div class="inner">
+    <div class="key-head">
+      <p class="eyebrow">Your nutrient key</p>
+      <h1>10 Nutrients That Support Healthy Hair</h1>
+      <p class="lead">Your hair follicles need a steady supply of energy and nutrients to function properly. These 10 nutrients support different parts of that process, from building hair strands to maintaining healthy cells and scalp tissue.</p>
+    </div>
+    <ul class="key">{{KEY}}
+    </ul>
+  </div>
+  <div class="howto">
+    <p class="eyebrow">Reading the meals</p>
+    <h2>Each meal is tagged with the nutrients it provides</h2>
+    <p>{{HIGHLIGHTS_NOTE}}</p>
+    <div class="tags">
+      <span class="tag t-protein">Protein</span><span class="tag t-carbs">Carbohydrates</span><span class="tag t-iron">Iron</span><span class="tag t-zinc">Zinc</span><span class="tag t-vitd">Vitamin D</span><span class="tag t-b12">Vitamin B12</span><span class="tag t-vitc">Vitamin C</span><span class="tag t-biotin">Biotin</span><span class="tag t-omega3">Omega-3</span><span class="tag t-folate">Folate</span>
+    </div>
+  </div>
+  {{FOLIO3}}
+</section>
+
+<!-- 4–6. MEALS -->
+{{MEAL_PAGES}}
+
+<!-- 7. SNACKS + CLOSING -->
+<section class="page">
+  <div class="inner">
+    <header class="meals-head"><p class="eyebrow">The Mane Meals</p><h1>Snacks</h1></header>
+    {{SNACKS}}
+  </div>
+  <div class="closing">
+    <p class="eyebrow">Before you go</p>
+    <h2>Keep It Simple. Keep It Flexible.</h2>
+    <div class="closing__cols">
+      <div>
+        <p>Supporting your hair through nutrition isn't about eating perfectly or following a meal plan down to the last detail.</p>
+      </div>
+      <div>
+        <p>It's about finding ways to include nourishing foods consistently, in a way that works for your life.</p>
+        <p>Start with a few meals that sound good to you. Repeat them, change them up, and build a rotation you enjoy.</p>
+        <p>Small, consistent choices can help you build a stronger nutrition foundation over time.</p>
+      </div>
+    </div>
+    <footer class="closing__sign">
+      <img src="assets/img/logo-cream.svg" alt="The Hair Loss Nutritionist">
+      <p><strong>Holly Forbes, RDN</strong><br>The Hair Loss Nutritionist · thehairlossnutritionist.com</p>
+    </footer>
+  </div>
+</section>
+
+</body>
+</html>
