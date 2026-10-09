@@ -55,7 +55,7 @@ PAGES = [
         ("For when you need a quick lunch", [
             ("image1", "Chicken Crunch Wrap",
              "Precooked chicken, whole-wheat tortilla, lettuce, shredded carrots, feta cheese, and Greek yogurt dressing.",
-             ["Protein", "Carbohydrates", "Zinc"]),
+             ["Protein", "Carbohydrates", "Iron", "Zinc", "Vitamin B12"]),
             ("image6", "Chickpea + Egg Salad",
              "Chickpeas, boiled eggs, spinach, tomatoes, avocado, cucumbers, and blueberries.",
              ["Protein", "Carbohydrates", "Iron", "Folate", "Biotin", "Vitamin C"]),
@@ -115,7 +115,7 @@ KEY = [
     ("iron", "Helps carry oxygen throughout the body, including to tissues that support hair growth."),
     ("zinc", "Supports cell growth, tissue repair, and normal hair follicle function."),
     ("vitd", "Plays a role in hair follicle cycling and normal immune function."),
-    ("b12", "Supports red blood cell production and DNA synthesis, both important for rapidly dividing cells."),
+    ("b12", "Supports red blood cell production and DNA synthesis, both important for rapidly dividing cells, like hair."),
     ("vitc", "Supports collagen production and helps your body absorb iron from plant foods."),
     ("biotin", "Helps your body metabolize nutrients for energy and supports normal cell function."),
     ("omega3", "Provide essential fats used in cell membranes and help regulate inflammatory processes."),
@@ -125,8 +125,9 @@ KEY_NAME = {"omega3": "Omega-3 Fatty Acids"}
 
 VITD_NOTE = ("*Vitamin D content depends on the type and fortification of the milk or milk "
              "alternative used. Check the product label.")
-HIGHLIGHTS_NOTE = ("The nutrient highlights show which of the 10 nutrients the foods in each meal "
-                   "contribute. They aren't guaranteed amounts, and they aren't meant to correct a deficiency.")
+HIGHLIGHTS_NOTE = ("The nutrients listed under each meal show what the foods can provide. The amount you "
+                   "get depends on how much you eat and the ingredients you use. These meals can help you get "
+                   "important nutrients, but they are not meant to treat or fix a nutrient deficiency.")
 DISCLAIMER = ("These meal ideas are meant to support your overall nutrition. They aren't intended to "
               "diagnose, treat, or reverse hair loss.")
 

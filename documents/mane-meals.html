@@ -10,21 +10,19 @@
 /* ---------- Cover ---------- */
 .cover__head { position: absolute; top: .62in; left: .75in; right: .75in; }
 .cover__logo { position: absolute; top: .52in; right: .7in; width: 1.5in; }
-.cover h1 { font-size: 62pt; font-weight: 800; letter-spacing: -.035em; line-height: .92; margin-top: .26in; }
-.cover__ed { display: block; font-size: 24pt; font-weight: 600; letter-spacing: -.01em; color: var(--accent); margin-top: .12in; }
-.cover__sub { margin-top: .22in; font-size: 12pt; font-weight: 500; max-width: 4.6in; line-height: 1.4; }
-.mosaic {
-  position: absolute; left: .75in; right: .75in; top: 3.05in; height: 6.85in;
-  display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); gap: .12in;
+.cover h1 { font-size: 56pt; font-weight: 800; letter-spacing: -.035em; line-height: .92; margin-top: .26in; }
+.cover__ed { display: block; font-size: 22pt; font-weight: 600; letter-spacing: -.01em; color: var(--accent); margin-top: .12in; }
+.cover__sub { margin-top: .16in; font-size: 11.5pt; font-weight: 500; max-width: 6.5in; line-height: 1.4; }
+.cover { background: #FAF5EC; }
+.cover__art {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 8.85in;
+  background: url("assets/img/mane-meals-cover.jpg") 50% 100% / cover no-repeat;
 }
-.mosaic img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block; }
-.mosaic img:nth-child(1) { grid-column: span 2; grid-row: span 2; }
 .cover__by {
-  position: absolute; left: .75in; right: .75in; bottom: .45in;
-  display: flex; justify-content: space-between; align-items: baseline;
+  position: absolute; right: .7in; top: 1.42in; text-align: right;
   font-size: 9pt; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--plum);
 }
-.cover__by span { font-weight: 500; letter-spacing: .04em; text-transform: none; color: var(--muted); }
+.cover__by span { display: block; margin-top: .02in; font-size: 8.4pt; font-weight: 500; letter-spacing: .04em; text-transform: none; color: var(--muted); }
 
 /* ---------- Interior ---------- */
 .inner { padding: .55in .75in 0; }
@@ -64,11 +62,13 @@
 .howto h2 { font-size: 12pt; font-weight: 800; margin: .04in 0 .08in; }
 .howto p { font-size: 8.9pt; margin: 0 0 .12in; }
 .tags { display: flex; flex-wrap: wrap; gap: .05in .06in; }
+.howto .tags { display: grid; grid-template-columns: repeat(5, 1fr); gap: .08in .1in; }
+.howto .tag { justify-content: center; font-size: 8pt; padding: .3em .7em; }
 
 /* Meal pages */
-.meals-head { display: flex; align-items: baseline; gap: .16in; margin-bottom: .1in; }
+.meals-head { margin-bottom: .1in; }
+.meals-head .eyebrow { margin: 0 0 .03in; }
 .meals-head h1 { font-size: 22pt; font-weight: 800; letter-spacing: -.02em; }
-.meals-head .eyebrow { order: 2; }
 .cat { margin-top: .12in; }
 .cat__title {
   font-size: 11pt; font-weight: 700; color: var(--accent);
@@ -105,19 +105,11 @@
 
 <!-- 1. COVER -->
 <section class="page cover">
+  <div class="cover__art" role="img" aria-label="Illustration of a woman with long curly hair at a table set with salmon bowls, salads, a smoothie, yogurt with berries, wraps, and nuts"></div>
   <img class="cover__logo" src="assets/img/logo.svg" alt="The Hair Loss Nutritionist">
   <div class="cover__head">
     <p class="eyebrow">21 meal and snack ideas</p>
     <h1>Mane Meals<span class="cover__ed">The Everyday Edition</span></h1>
-    <p class="cover__sub">Simple meals and snacks that provide nutrients important for healthy hair.</p>
-  </div>
-  <div class="mosaic">
-    <img src="assets/photos/image7.jpg" alt="">
-    <img src="assets/photos/image16.jpg" alt="">
-    <img src="assets/photos/image18.jpg" alt="">
-    <img src="assets/photos/image8.jpg" alt="">
-    <img src="assets/photos/image12.jpg" alt="">
-    <img src="assets/photos/image10.jpg" alt="">
   </div>
   <p class="cover__by">Holly Forbes, RDN <span>The Hair Loss Nutritionist</span></p>
 </section>
@@ -131,7 +123,7 @@
       <p class="lead">Eating to support your hair doesn't have to mean buying expensive superfoods, following a strict meal plan, or making something different every day.</p>
       <div class="welcome__cols">
         <p><strong>Mane Meals: The Everyday Edition</strong> brings together 21 meal and snack ideas that provide nutrients important for healthy hair.</p>
-        <p>You'll find meals for busy mornings, quick lunches, and evenings when you barely feel like cooking. Many use similar ingredients in different ways, giving you more variety without having to start from scratch every day.</p>
+        <p>You'll find meals for busy mornings, quick lunches, and evenings when you barely feel like cooking. Many use the same ingredients in different ways, showing you how to add variety to your meals without needing a completely different set of groceries each week.</p>
         <p>The goal isn't to follow every meal exactly. It's to give you ideas you can come back to, adapt, and make your own.</p>
       </div>
     </div>
@@ -190,7 +182,7 @@
         <li class="key__item t-b12">
           <img src="assets/icons/b12.png" alt="">
           <div><h3>Vitamin B12</h3>
-          <p>Supports red blood cell production and DNA synthesis, both important for rapidly dividing cells.</p></div>
+          <p>Supports red blood cell production and DNA synthesis, both important for rapidly dividing cells, like hair.</p></div>
         </li>
         <li class="key__item t-vitc">
           <img src="assets/icons/vitc.png" alt="">
@@ -217,7 +209,7 @@
   <div class="howto">
     <p class="eyebrow">Reading the meals</p>
     <h2>Each meal is tagged with the nutrients it provides</h2>
-    <p>The nutrient highlights show which of the 10 nutrients the foods in each meal contribute. They aren&#x27;t guaranteed amounts, and they aren&#x27;t meant to correct a deficiency.</p>
+    <p>The nutrients listed under each meal show what the foods can provide. The amount you get depends on how much you eat and the ingredients you use. These meals can help you get important nutrients, but they are not meant to treat or fix a nutrient deficiency.</p>
     <div class="tags">
       <span class="tag t-protein">Protein</span><span class="tag t-carbs">Carbohydrates</span><span class="tag t-iron">Iron</span><span class="tag t-zinc">Zinc</span><span class="tag t-vitd">Vitamin D</span><span class="tag t-b12">Vitamin B12</span><span class="tag t-vitc">Vitamin C</span><span class="tag t-biotin">Biotin</span><span class="tag t-omega3">Omega-3</span><span class="tag t-folate">Folate</span>
     </div>
@@ -293,7 +285,7 @@
         <img class="meal__photo" src="assets/photos/image1.jpg" alt="">
         <div class="meal__body">
           <h3>Chicken Crunch Wrap</h3><p class="meal__ing">Precooked chicken, whole-wheat tortilla, lettuce, shredded carrots, feta cheese, and Greek yogurt dressing.</p>
-          <div class="tags"><span class="tag t-protein">Protein</span><span class="tag t-carbs">Carbohydrates</span><span class="tag t-zinc">Zinc</span></div>
+          <div class="tags"><span class="tag t-protein">Protein</span><span class="tag t-carbs">Carbohydrates</span><span class="tag t-iron">Iron</span><span class="tag t-zinc">Zinc</span><span class="tag t-b12">Vitamin B12</span></div>
         </div>
       </article>
       <article class="meal">

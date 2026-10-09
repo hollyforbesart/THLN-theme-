@@ -78,13 +78,13 @@
 .end__photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(250,246,240,0) 65%, var(--cream)); }
 .end__body { position: absolute; top: 3.68in; left: .7in; right: .7in; }
 .end__body > h1 { font-size: 27pt; font-weight: 800; letter-spacing: -.02em; margin: .1in 0 .26in; }
-.paths { display: grid; grid-template-columns: 1fr 1fr; gap: .26in; }
+.paths { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: .26in; }
 .path { border-radius: 14px; padding: .3in .3in .28in; display: flex; flex-direction: column; }
 .path h2 { font-size: 14pt; font-weight: 800; line-height: 1.22; margin: .08in 0 .14in; }
 .path p { font-size: 9.6pt; }
 .path .btn { margin-top: auto; align-self: flex-start; }
 .path__go { margin-top: auto; padding-top: .12in; }
-.path__url { display: block; font-size: 7.6pt; margin-top: .08in; letter-spacing: .02em; }
+.path__url { display: block; font-size: 7.4pt; margin-top: .08in; min-height: 2.9em; }
 .path--nav { background: var(--plum); color: rgba(250,246,240,.86); }
 .path--nav h2, .path--nav strong { color: #fff; }
 .path--nav .eyebrow { color: var(--purple); }
@@ -295,7 +295,7 @@
         <p>Inside, you'll find <strong>21 meal and snack ideas</strong> featuring foods that provide the 10 nutrients you just learned about. From grab-and-go breakfasts to easy dinners after a long day, you'll see how familiar ingredients can come together in different ways.</p>
         <div class="path__go">
           <a class="btn" href="https://roots.thehairlossnutritionist.com/products/mane-meals-everyday">Explore Mane Meals <span aria-hidden="true">→</span></a>
-          <span class="path__url">roots.thehairlossnutritionist.com</span>
+          <span class="path__url">roots.thehairlossnutritionist.com<br>/products/mane-meals-everyday</span>
         </div>
       </div>
     </div>
