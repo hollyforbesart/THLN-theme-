@@ -13,9 +13,9 @@
 .cover h1 { font-size: 56pt; font-weight: 800; letter-spacing: -.035em; line-height: .92; margin-top: .26in; }
 .cover__ed { display: block; font-size: 22pt; font-weight: 600; letter-spacing: -.01em; color: var(--accent); margin-top: .12in; }
 .cover__sub { margin-top: .16in; font-size: 11.5pt; font-weight: 500; max-width: 6.5in; line-height: 1.4; }
-.cover { background: #FAF5EC; }
+.cover { background: #FEF7F0; }
 .cover__art {
-  position: absolute; left: 0; right: 0; bottom: 0; height: 8.85in;
+  position: absolute; left: 0; right: 0; bottom: 0; height: 11in;
   background: url("assets/img/mane-meals-cover.jpg") 50% 100% / cover no-repeat;
 }
 .cover__by {
@@ -83,20 +83,26 @@
 
 /* Snacks + closing */
 .closing {
-  position: absolute; left: 0; right: 0; bottom: 0; height: 4.6in;
+  position: absolute; left: 0; right: 0; bottom: 0;
   background: var(--plum); color: rgba(250,246,240,.86);
-  padding: .5in .75in 0;
+  padding: .36in .75in .3in;
 }
-.closing h2 { color: #fff; font-size: 24pt; font-weight: 800; letter-spacing: -.02em; margin: .08in 0 .2in; }
+.closing h2 { color: #fff; font-size: 22pt; font-weight: 800; letter-spacing: -.02em; margin: .06in 0 .14in; }
 .closing .eyebrow { color: var(--purple); }
-.closing__cols { display: grid; grid-template-columns: 1fr 1fr; gap: .4in; font-size: 10.2pt; line-height: 1.55; }
-.closing__cols p:first-child { font-size: 12pt; color: #fff; font-weight: 500; line-height: 1.45; }
-.closing__sign {
-  position: absolute; left: .75in; right: .75in; bottom: .4in;
-  display: flex; align-items: center; gap: .24in;
-  border-top: 1px solid rgba(250,246,240,.18); padding-top: .2in; font-size: 8.4pt; color: rgba(250,246,240,.7);
+.closing__cols { display: grid; grid-template-columns: 1fr 1fr; gap: .4in; font-size: 9.5pt; line-height: 1.45; }
+.closing__cols > div:first-child p { font-size: 11pt; color: #fff; font-weight: 500; line-height: 1.45; }
+.upsell {
+  margin-top: .2in; background: var(--lavender); color: var(--ink); border-radius: 14px;
+  padding: .2in .28in; display: grid; grid-template-columns: 1fr auto; gap: .3in; align-items: center;
 }
-.closing__sign img { width: 1.3in; }
+.upsell .eyebrow { color: var(--accent); }
+.upsell h3 { font-size: 13pt; font-weight: 800; margin: .05in 0 .08in; }
+.upsell p:last-child { margin: 0; font-size: 9.6pt; max-width: 4.2in; }
+.closing__sign {
+  margin-top: .16in; display: flex; align-items: center; gap: .2in;
+  border-top: 1px solid rgba(250,246,240,.18); padding-top: .16in; font-size: 8.2pt; color: rgba(250,246,240,.7);
+}
+.closing__sign img { width: .8in; }
 .closing__sign strong { color: #fff; }
 .closing__sign p { margin: 0; }
 </style>
@@ -110,6 +116,7 @@
   <div class="cover__head">
     <p class="eyebrow">21 meal and snack ideas</p>
     <h1>Mane Meals<span class="cover__ed">The Everyday Edition</span></h1>
+    <p class="cover__sub">Simple meals and snacks that provide nutrients important for healthy hair.</p>
   </div>
   <p class="cover__by">Holly Forbes, RDN <span>The Hair Loss Nutritionist</span></p>
 </section>
@@ -390,7 +397,7 @@
 
 <!-- 7. SNACKS + CLOSING -->
 <section class="page">
-  <div class="inner">
+  <div class="inner" style="padding-top:.45in">
     <header class="meals-head"><p class="eyebrow">The Mane Meals</p><h1>Snacks</h1></header>
     
     <section class="cat">
@@ -424,16 +431,26 @@
     <div class="closing__cols">
       <div>
         <p>Supporting your hair through nutrition isn't about eating perfectly or following a meal plan down to the last detail.</p>
+        <p class="lead2">It's about finding ways to include nourishing foods consistently, in a way that works for your life.</p>
       </div>
       <div>
-        <p>It's about finding ways to include nourishing foods consistently, in a way that works for your life.</p>
         <p>Start with a few meals that sound good to you. Repeat them, change them up, and build a rotation you enjoy.</p>
         <p>Small, consistent choices can help you build a stronger nutrition foundation over time.</p>
       </div>
     </div>
+    <aside class="upsell">
+      <div>
+        <p class="eyebrow">Next step</p>
+        <h3>Want to Make Grocery Shopping Easier?</h3>
+        <p>The <strong>Healthy Hair Grocery Guide</strong> shows you how to plan your shopping, build balanced meals, and make the most of your groceries using simple, flexible strategies.</p>
+      </div>
+      <div class="upsell__go">
+        <a class="btn" href="https://roots.thehairlossnutritionist.com/products/hair-growth-grocery-guide">Explore the Grocery Guide <span aria-hidden="true">→</span></a>
+      </div>
+    </aside>
     <footer class="closing__sign">
       <img src="assets/img/logo-cream.svg" alt="The Hair Loss Nutritionist">
-      <p><strong>Holly Forbes, RDN</strong><br>The Hair Loss Nutritionist · thehairlossnutritionist.com</p>
+      <p><strong>Holly Forbes, RDN</strong> · The Hair Loss Nutritionist · thehairlossnutritionist.com</p>
     </footer>
   </div>
 </section>
