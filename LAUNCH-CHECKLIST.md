@@ -18,3 +18,11 @@ New: `https://roots.thehairlossnutritionist.com/products/grocery-guide`
 - [ ] **Resources page.** Resources → Hair Growth Grocery Guide: update the link, title, price and description to match the revamp.
 - [ ] **Anywhere else:** Kit emails and sequences, link-in-bio, Pinterest pins, other PDFs.
 - [ ] Test: open the old address in a private window and check it lands on the new guide.
+
+## Well Resourced Dietitian shop
+
+Once everything above is done and the new files are final:
+
+- [ ] Add **Mane Meals: The Everyday Edition**
+- [ ] Add the revamped **Grocery Guide**, or update the existing listing if the old Hair Growth Grocery Guide is already there (new file, title, description, cover and price)
+- [ ] Check each listing's cover image, description and any links inside the PDFs before publishing
